@@ -1,0 +1,151 @@
+/* Basic reset */
+* {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+
+	/* Text style */
+	font: bold 14px Arial, sans-serif;
+}
+
+/* Background */
+html {
+	height: 100%;
+	/* IE9 fallback */
+	background: white;
+	background: radial-gradient(circle, #fff 20%, #ccc);
+	background-size: cover;
+}
+
+#calculator {
+	width: 325px;
+	height: auto;
+
+	margin: 100px auto;
+	padding: 20px;
+
+	/* IE9 fallback */
+	background: #9dd2ea;
+	background: linear-gradient(#9dd2ea, #8bceec);
+	border-radius: 3px;
+	box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Top portion */
+.top .clear {
+	float: left;
+}
+
+.top .screen {
+	height: 40px;
+	width: 212px;
+
+	float: right;
+
+	padding: 0 10px;
+
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+
+	/* Typography */
+	font-size: 17px;
+	line-height: 40px;
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-align: right;
+	letter-spacing: 1px;
+}
+
+/* Clear floats */
+.keys, .top {overflow: hidden;}
+
+.keys span, .top span.clear {
+	float: left;
+
+	cursor: pointer;
+
+	width: 66px;
+	height: 36px;
+
+	background: white;
+	border-radius: 3px;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+
+	margin: 0 7px 11px 0;
+
+	color: #888;
+	line-height: 36px;
+	text-align: center;
+
+	/* Prevent selection of text */
+	user-select: none;
+
+	/* Smoothing out hover and active states using css3 transitions */
+	transition: all 0.2s ease;
+}
+
+/* Separate operators from numbers */
+/* Style operator type of keys */
+.keys span.operator {
+	background: #FFFFCC;
+	box-shadow: 0px 4px #CCCC66;
+	margin-right: 0;
+}
+
+.keys span.result {
+	background: #CCFFCC;
+	box-shadow: 0px 4px #66CC66;
+}
+
+.top span.clear {
+	background: #ff9fa8;
+	box-shadow: 0px 4px #ff7c87;
+	color: white;
+}
+
+/* Hover effects */
+.keys span:hover {
+	background: #ffffff;
+	box-shadow: 0px 4px #336699;
+}
+
+.keys span.operator:hover {
+	background: #FFFF99;
+	box-shadow: 0px 4px #999933;
+}
+
+.keys span.result:hover {
+	background: #99FF99;
+	box-shadow: 0px 4px #99CC99;
+}
+
+.top span.clear:hover {
+	background: #f68991;
+	box-shadow: 0px 4px #d3545d;
+	color: white;
+}
+
+/* Simulate "pressed" effect on keys click */
+.keys span:active {
+	position: relative;
+	box-shadow: 0px 0px #336699;
+	top: 4px;
+}
+
+.keys span.operator:active {
+	box-shadow: 0px 0px #999933;
+	top: 4px;
+}
+
+.keys span.result:active {
+	box-shadow: 0px 0px #99CC99;
+	top: 4px;
+}
+
+.top span.clear:active {
+	position: relative;
+	box-shadow: 0px 0px #d3545d;
+	top: 4px;
+}
